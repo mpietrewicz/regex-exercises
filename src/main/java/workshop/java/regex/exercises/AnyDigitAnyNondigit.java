@@ -13,9 +13,10 @@ public class AnyDigitAnyNondigit {
         user1
         user2
         user3
+        should return false for users
         (\\d can be used to match any digit)
      */
-    public static Pattern USER_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern USER_PATTERN = Pattern.compile("user\\d");
 
     /*
         Write a pattern that matches:
@@ -27,7 +28,7 @@ public class AnyDigitAnyNondigit {
         4PB4
         9MN7
      */
-    public static Pattern VS_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern VS_PATTERN = Pattern.compile("\\dV.+");
 
     /*
         Write a pattern that matches:
@@ -39,7 +40,7 @@ public class AnyDigitAnyNondigit {
         Boeing 773
         BOEING 7U7
      */
-    public static Pattern BOEING_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern BOEING_PATTERN = Pattern.compile("([B|b]oeing) 7[3|7]7|(BOEING) 747");
 
 
     /*
@@ -52,7 +53,7 @@ public class AnyDigitAnyNondigit {
         2.5 years old
         32 years
      */
-    public static Pattern AGE_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern AGE_PATTERN = Pattern.compile("\\d{2} years old");
 
 
     /*
@@ -133,7 +134,7 @@ public class AnyDigitAnyNondigit {
         logged in as user BOB1
         LOGGED IN AS USER 1234
      */
-    public static Pattern LOGIN_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern LOGIN_PATTERN = Pattern.compile("logged in as user [a-zA-z]+$");
 
 
 }

@@ -18,7 +18,7 @@ public class AnyAlphaAnyNonalpha {
         love@email.pl
         3,5l@email.com
      */
-    public static Pattern EMAIL_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern EMAIL_PATTERN = Pattern.compile("^\\w[^love]*@\\w+.\\w+");
 
 
     /*
@@ -31,7 +31,7 @@ public class AnyAlphaAnyNonalpha {
         Password: 123abc/
         Password: I<3you!
      */
-    public static Pattern PASS_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern PASS_PATTERN = Pattern.compile("^Password:\\s\\w+\\W{2}$");
 
 
     /*
@@ -44,7 +44,7 @@ public class AnyAlphaAnyNonalpha {
         St3ven1995m
         Simon2000..
      */
-    public static Pattern NAME_YEAR_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern NAME_YEAR_PATTERN = Pattern.compile("^S[A-z]{4}\\w*");
 
 
     /*
@@ -57,7 +57,7 @@ public class AnyAlphaAnyNonalpha {
         195
         4a.
      */
-    public static Pattern THREE_CHARS_DOT_PATTERN = Pattern.compile(REPLACE_ME);
+    public static Pattern THREE_CHARS_DOT_PATTERN = Pattern.compile("(^\\w{3}.$)|(\\w{3}[.])");
 
 
     /*
